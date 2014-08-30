@@ -41,9 +41,11 @@ to update remote w/ local changes:
 git checkout master
 git fetch origin master
 git rebase -i origin/master
-git push -u origin master
-...or
 git push origin master
+...or w/ -u if above doesn't work
+git push -u origin master
+...enter uname and password
+
 
 
 to update local repo w/ remote changes:
