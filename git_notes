@@ -1,0 +1,53 @@
+create a central (non-working) repo:
+$ git init --bare <directory_name.git>
+
+create a working repo:
+$ git init <directory_name>
+...or within a working repo:
+$ git init
+
+create a repo on github and clone it to a local repo:
+git clone https://github.com/tbickle/repo_name.git
+cd repo_name
+
+configure:
+git config --global user.name <your_username>
+git config --global user.email <your_email>
+git config --system core.editor vim
+
+add files:
+git add <filename>
+git add <directory_name>
+
+status tells you you have files added and their status:
+git status
+
+commit files:
+git commit -m "type a message here"
+
+status indicates these files are now committed:
+git status
+
+add github as a remote repo:
+git remote add <some_name> https://github.com/tbickle/repo_name.git
+...or
+git remote rm origin
+git remote add origin https://github.com/tbickle/repo_name.git
+
+see if remote repo has been added:
+git remote
+
+to update remote w/ local changes:
+git checkout master
+git fetch origin master
+git rebase -i origin/master
+git push -u origin master
+...or
+git push origin master
+
+
+to update local repo w/ remote changes:
+git checkout master
+git pull --rebase origin
+
+see www.atlassian.com/git/tutorial for more info
